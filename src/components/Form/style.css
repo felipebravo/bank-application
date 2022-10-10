@@ -1,0 +1,79 @@
+.App-form {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+
+  width: 100%;
+  height: fit-content;
+  padding: 15px;
+
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+}
+
+.App-form > input {
+  width: 98%;
+  height: 48px;
+  padding-left: 10px;
+
+  border-radius: 8px;
+  border: none;
+}
+
+.App-form > div {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.App-form > div > div {
+  display: flex;
+  flex-direction: column;
+
+  width: 45%;
+}
+
+.App-form > div > div > input {
+  width: 98%;
+  height: 48px;
+  padding-right: 10px;
+
+  border-radius: 8px;
+  border: none;
+
+  text-align: end;
+}
+
+.App-form > div > div > select {
+  width: 98%;
+  height: 48px;
+  margin-top: 3px;
+  padding: 0 5px;
+
+  border-radius: 8px;
+}
+
+.App-form > button {
+  align-self: center;
+
+  height: fit-content;
+  width: 100%;
+  padding: 5px;
+  margin-top: 30px;
+
+  border-radius: 4px;
+  border: 2.5px solid #fd377e;
+
+  background-color: #fd377e;
+
+  cursor: pointer;
+
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+}
