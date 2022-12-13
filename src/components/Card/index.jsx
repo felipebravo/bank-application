@@ -16,4 +16,6 @@ const Card = ({ transaction, index, discard }) => {
   );
 };
 
+// Just trying
+
 export default Card;
