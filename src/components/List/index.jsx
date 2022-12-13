@@ -3,7 +3,11 @@ import "./style.css";
 
 const List = ({ filter, setFilter, setListTransactions }) => {
   const discard = (id) => {
-    setFilter(filter.filter((transaction) => transaction.id !== id));
+    console.log(id);
+    setFilter(
+      filter.filter((transaction) => console.log(transaction.id) !== id)
+    );
+    console.log(filter);
     setListTransactions(filter.filter((transaction) => transaction.id !== id));
   };
   return (

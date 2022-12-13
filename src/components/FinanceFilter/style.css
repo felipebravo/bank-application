@@ -21,6 +21,7 @@
 
 .FinanceFilter > ul > li > button {
   height: 100%;
+  width: 100%;
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -28,13 +29,12 @@
   padding: 10px;
 
   background-color: #e9ecef;
-}
 
-.FinanceFilter > ul > li > button:active {
-  background-color: #fd377e;
-}
+  &:active {
+    background-color: #fd377e;
+  }
 
-.FinanceFilter > ul > li > button:hover {
-  background-color: #fd377e;
-  color: #e9ecef;
+  & :hover {
+    background-color: #fd377e;
+  }
 }

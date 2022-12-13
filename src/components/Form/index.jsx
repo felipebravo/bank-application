@@ -15,7 +15,6 @@ const Form = ({ listTransactions, setListTransactions, setFilter }) => {
       id: uuidv4(),
       ...formData,
     };
-    console.log(newFormData);
     if (!formData.description || !formData.value) {
       setListTransactions(listTransactions);
     } else {

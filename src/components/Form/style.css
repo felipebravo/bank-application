@@ -58,6 +58,10 @@
   border-radius: 8px;
 }
 
+.App-form > div > div > select > option {
+  background-color: grey;
+}
+
 .App-form > button {
   align-self: center;
 
