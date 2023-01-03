@@ -7,6 +7,8 @@
 }
 
 .HomePage-description {
+  position: relative;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -15,39 +17,34 @@
 }
 
 .HomePage-description > h1 {
-  background: linear-gradient(90deg, #fd377e 49.84%, #ffffff 29.25%);
-  width: fit-content;
+  background: linear-gradient(90deg, #1d3784 43.84%, #ffffff 29.25%);
+  width: 140px;
+  height: fit-content;
+  min-width: fit-content;
   padding: 5px;
   border-radius: 4px;
-  border: 2.5px solid #fd377e;
+  border: 2.5px solid #1d3784;
 }
 
 .HomePage-description > p {
   font-weight: 800;
   font-size: 38px;
 
-  color: #ffffff;
+  color: #f29949;
 
   padding: 0px;
   margin: 0px;
 }
 
-.HomePage-description > span {
-  font-weight: 400;
-  font-size: 16px;
-
-  color: #ffffff;
-}
-
 .HomePage-description > button {
   height: 48px;
-  width: 200px;
+  width: 140px;
   margin-top: 15px;
 
   border-radius: 4px;
-  border: 2.5px solid #fd377e;
+  border: 2.5px solid #1d3784;
 
-  background-color: #fd377e;
+  background-color: #1d3784;
 
   cursor: pointer;
 
@@ -59,4 +56,81 @@
 
 .HomePage-description > button:hover {
   filter: brightness(1.2);
+}
+
+.HomePage-img {
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 690px) {
+  .HomePage {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .HomePage-description {
+    width: 100%;
+    min-height: 30%;
+    flex-direction: row;
+  }
+
+  .HomePage-description > h1 {
+    margin: 5px;
+  }
+
+  .HomePage-description > p {
+    font-weight: 600;
+    font-size: 24px;
+  }
+
+  .HomePage-description > button {
+    position: absolute;
+    top: 45%;
+    left: 0px;
+    width: 100%;
+    margin: 5px;
+  }
+}
+
+@media (max-width: 630px) {
+  .HomePage-description > button {
+    width: 154px;
+  }
+
+  .HomePage-img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 460px) {
+  .HomePage-description > button {
+    top: -5px;
+    left: 50%;
+    height: 57px;
+  }
+
+  .HomePage-description {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 390px) {
+  .HomePage-description {
+    justify-content: space-between;
+    min-height: fit-content;
+  }
+
+  .HomePage-description > button {
+    position: unset;
+  }
+
+  .HomePage-img {
+    max-height: 60%;
+    width: 90%;
+  }
 }
