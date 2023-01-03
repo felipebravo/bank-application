@@ -3,7 +3,7 @@ import "./style.css";
 const FinanceFilter = ({ listTransactions, setFilter }) => {
   return (
     <div className="FinanceFilter">
-      <span>Resumo Financeiro</span>
+      <h2>Resumo Financeiro</h2>
       <ul>
         <li>
           <button

@@ -1,5 +1,5 @@
 .App-header {
-  width: 100vw;
+  width: 100%;
   height: 90px;
   padding: 0 20px;
 
@@ -8,35 +8,38 @@
   justify-content: space-between;
   align-items: center;
 
-  background-color: #f8f9fa;
-  box-shadow: 0px 4px 32px 12px #00000025;
+  background-color: #282c34;
+  box-shadow: 0px 0px 30px 0px #ffffff25;
 }
 
-.App-header > span {
+.App-header > h1 {
+  background: linear-gradient(90deg, #1d3784 45%, #ffffff 29.25%);
+  width: 140px;
   height: fit-content;
+  min-width: fit-content;
   padding: 5px;
-
   border-radius: 4px;
-
-  background: linear-gradient(90deg, #fd377e 50%, #ffffff 29.25%);
-
-  font-size: 24px;
-  font-weight: 400;
+  border: 2.5px solid #1d3784;
 }
 
 .App-header > button {
-  height: fit-content;
-  width: 150px;
-  padding: 5px;
+  height: 48px;
+  width: 140px;
 
   border-radius: 4px;
-  border: 2.5px solid #fd377e;
+  border: 2.5px solid #282c34;
 
-  background-color: #fd377e;
+  background-color: #282c34;
 
   cursor: pointer;
 
-  font-weight: 400;
-  font-size: 24px;
+  font-weight: 600;
+  font-size: 16px;
+  text-transform: uppercase;
   color: #ffffff;
+}
+
+.App-header > button:hover {
+  background-color: #1d3784;
+  border-color: #1d3784;
 }

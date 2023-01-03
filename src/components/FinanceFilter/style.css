@@ -1,7 +1,14 @@
 .FinanceFilter {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 10px;
+}
+
+.FinanceFilter > h2 {
+  color: #f29949;
+  margin: 0px;
 }
 
 .FinanceFilter > ul {
@@ -14,27 +21,37 @@
   padding: 0px;
 }
 
-.FinanceFilter > ul > li {
-  border: 1px solid #e9ecef;
-  border-radius: 4px;
-}
-
 .FinanceFilter > ul > li > button {
   height: 100%;
-  width: 100%;
+  width: 100px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 
   padding: 10px;
 
-  background-color: #e9ecef;
+  background-color: #1d3784;
 
-  &:active {
-    background-color: #fd377e;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.FinanceFilter > ul > li > button:focus {
+  filter: brightness(1.2);
+}
+
+.FinanceFilter > ul > li > button:hover {
+  filter: brightness(1.2);
+}
+
+@media (max-width: 370px) {
+  .FinanceFilter > ul {
+    gap: 5px;
   }
 
-  & :hover {
-    background-color: #fd377e;
+  .FinanceFilter > ul > li > button {
+    width: 90px;
   }
 }

@@ -21,48 +21,33 @@ const App = () => {
         <div>
           <Header setIsLoggedIn={setIsLoggedIn} />
           <Main>
-            {listTransactions.length === 0 ? (
-              <div>
-                <div className="Form-div">
-                  <Form
-                    listTransactions={listTransactions}
-                    setListTransactions={setListTransactions}
-                    setFilter={setFilter}
-                  />
-                </div>
-                <div className="Finance-div">
-                  <FinanceFilter
-                    listTransactions={listTransactions}
-                    filter={filter}
-                    setFilter={setFilter}
-                  />
-                  <EmptyList />
-                </div>
+            <div>
+              <div className="Form-div">
+                <Form
+                  listTransactions={listTransactions}
+                  setListTransactions={setListTransactions}
+                  setFilter={setFilter}
+                />
+                {listTransactions.length > 0 && <TotalMoney filter={filter} />}
               </div>
-            ) : (
-              <div>
-                <div className="Form-div">
-                  <Form
-                    listTransactions={listTransactions}
-                    setListTransactions={setListTransactions}
-                    setFilter={setFilter}
-                  />
-                  <TotalMoney listTransactions={listTransactions} />
-                </div>
-                <div className="Finance-div">
-                  <FinanceFilter
-                    listTransactions={listTransactions}
-                    filter={filter}
-                    setFilter={setFilter}
-                  />
+              <div className="Finance-div">
+                <FinanceFilter
+                  listTransactions={listTransactions}
+                  filter={filter}
+                  setFilter={setFilter}
+                />
+                {listTransactions.length === 0 ? (
+                  <EmptyList />
+                ) : (
                   <List
                     filter={filter}
-                    setListTransactions={setListTransactions}
                     setFilter={setFilter}
+                    listTransactions={listTransactions}
+                    setListTransactions={setListTransactions}
                   />
-                </div>
+                )}
               </div>
-            )}
+            </div>
           </Main>
         </div>
       ) : (

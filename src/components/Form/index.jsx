@@ -18,7 +18,7 @@ const Form = ({ listTransactions, setListTransactions, setFilter }) => {
     if (!formData.description || !formData.value) {
       setListTransactions(listTransactions);
     } else {
-      setListTransactions([...listTransactions, newFormData]);
+      setListTransactions((previousValue) => [...previousValue, newFormData]);
       setFilter((previousValue) => [...previousValue, newFormData]);
     }
 
@@ -33,8 +33,9 @@ const Form = ({ listTransactions, setListTransactions, setFilter }) => {
     <form className="App-form" onSubmit={(evt) => newTransaction(evt)}>
       <label htmlFor="">Descrição</label>
       <input
+        className="placeholder-text"
         type="text"
-        placeholder="Digite aqui sua descrição"
+        placeholder="Digite o título da transação..."
         value={formData.description}
         onChange={(evt) =>
           setFormData({ ...formData, description: evt.target.value })
@@ -44,6 +45,7 @@ const Form = ({ listTransactions, setListTransactions, setFilter }) => {
         <div>
           <label htmlFor="">Valor</label>
           <input
+            className="placeholder-text"
             type="number"
             placeholder="R$"
             value={formData.value}

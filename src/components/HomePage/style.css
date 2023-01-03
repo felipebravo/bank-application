@@ -69,13 +69,13 @@
 
 @media (max-width: 690px) {
   .HomePage {
-    height: 100%;
+    height: fit-content;
     flex-direction: column;
   }
 
   .HomePage-description {
     width: 100%;
-    min-height: 30%;
+    min-height: 180px;
     flex-direction: row;
   }
 
@@ -109,28 +109,29 @@
 
 @media (max-width: 460px) {
   .HomePage-description > button {
-    top: -5px;
+    top: 20px;
     left: 50%;
     height: 57px;
   }
 
   .HomePage-description {
     flex-direction: column;
+    height: fit-content;
   }
 }
 
 @media (max-width: 390px) {
   .HomePage-description {
     justify-content: space-between;
-    min-height: fit-content;
   }
 
   .HomePage-description > button {
-    position: unset;
+    top: 0px;
   }
 
   .HomePage-img {
-    max-height: 60%;
+    margin-bottom: 100px;
+    max-height: 70%;
     width: 90%;
   }
 }

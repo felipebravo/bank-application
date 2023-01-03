@@ -3,8 +3,21 @@
   align-items: center;
   justify-content: space-between;
 
-  border: 1px solid #e9ecef;
+  box-shadow: 0px 0px 20px 10px #ffffff25;
   border-radius: 4px;
 
   padding: 10px;
+}
+
+.TotalMoney > div {
+  height: fit-content;
+  color: #f29949;
+}
+
+.TotalMoney > div > h2 {
+  margin: 0px;
+}
+
+.TotalMoney > span {
+  color: #f29949;
 }

@@ -1,16 +1,18 @@
 .App-main {
-  height: 80vh;
+  height: 100%;
   width: 80vw;
 }
 
 .App-main > div {
   display: flex;
-  gap: 15px;
+  gap: 100px;
   width: 100%;
+  height: fit-content;
+  margin-top: 80px;
 }
 
 .Form-div {
-  min-width: 35%;
+  min-width: 40%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -20,5 +22,62 @@
   min-width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
+  padding: 0 10px;
+}
+
+@media (max-width: 840px) {
+  .App-main {
+    height: 80vh;
+    width: 95vw;
+  }
+
+  .App-main > div {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .Form-div {
+    max-width: 50%;
+  }
+
+  .Finance-div {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 690px) {
+  .App-main {
+    height: 100%;
+  }
+
+  .App-main > div {
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .Form-div {
+    min-width: 90%;
+  }
+
+  .Finance-div {
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 390px) {
+  .App-main {
+    height: max-content;
+  }
+
+  .App-main > div {
+    margin-top: 20px;
+    height: fit-content;
+  }
 }

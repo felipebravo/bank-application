@@ -1,15 +1,14 @@
 import Card from "../Card";
 import "./style.css";
 
-const List = ({ filter, setFilter, setListTransactions }) => {
+const List = ({ filter, setFilter, listTransactions, setListTransactions }) => {
   const discard = (id) => {
-    console.log(id);
-    setFilter(
-      filter.filter((transaction) => console.log(transaction.id) !== id)
+    setFilter(filter.filter((transaction) => transaction.id !== id));
+    setListTransactions(
+      listTransactions.filter((transaction) => transaction.id !== id)
     );
-    console.log(filter);
-    setListTransactions(filter.filter((transaction) => transaction.id !== id));
   };
+
   return (
     <ul className="List-transactions">
       {filter.map((transaction, index) => (

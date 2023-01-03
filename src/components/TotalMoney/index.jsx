@@ -1,6 +1,6 @@
 import "./style.css";
 
-const TotalMoney = ({ listTransactions }) => {
+const TotalMoney = ({ filter }) => {
   return (
     <div className="TotalMoney">
       <div>
@@ -9,7 +9,7 @@ const TotalMoney = ({ listTransactions }) => {
       </div>
       <span>
         R$
-        {listTransactions
+        {filter
           .reduce((valorAnterior, valorAtual) => {
             return valorAtual.type === "Entrada"
               ? valorAtual.value + valorAnterior

@@ -1,0 +1,77 @@
+.FinanceDiv > h2 {
+  color: #f29949;
+}
+
+.FinanceDiv > ul {
+  list-style: none;
+  width: 100%;
+
+  margin: 0 0 20px 0;
+  padding: 0px;
+}
+
+.FinanceDiv > ul > li {
+  list-style: none;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  width: 100%;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.FinanceDiv > ul > li > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.FinanceDiv > ul > li > div:first-child > div:first-child {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(-45deg, #f29949, #1d3784);
+  background-size: 200% 200%;
+  animation: gradient 5s linear infinite;
+}
+
+.FinanceDiv > ul > li > div > div:nth-child(2) {
+  width: 60px;
+  height: 10px;
+
+  background: linear-gradient(-45deg, #f29949, #1d3784);
+  background-size: 200% 200%;
+  animation: gradient 5s linear infinite;
+}
+
+.FinanceDiv > ul > li > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+.FinanceDiv > ul > li > div:nth-child(2) > div {
+  width: 200px;
+  height: 10px;
+
+  background: linear-gradient(-45deg, #f29949, #1d3784);
+  background-size: 200% 200%;
+  animation: gradient 5s linear infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

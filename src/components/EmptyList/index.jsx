@@ -1,13 +1,33 @@
-import { useState } from "react";
-import emptyList from "../../assets/img/emptyList.svg";
+import "./style.css";
 
 const EmptyList = () => {
   return (
-    <div>
+    <div className="FinanceDiv">
       <h2>Você ainda não possui nenhum lançamento</h2>
-      <img src={emptyList} alt="Itens vazios" />
-      <img src={emptyList} alt="Itens vazios" />
-      <img src={emptyList} alt="Itens vazios" />
+      <ul>
+        <li>
+          <div>
+            <div />
+            <div />
+          </div>
+          <div>
+            <div />
+            <div />
+            <div />
+          </div>
+        </li>
+        <li>
+          <div>
+            <div />
+            <div />
+          </div>
+          <div>
+            <div />
+            <div />
+            <div />
+          </div>
+        </li>
+      </ul>
     </div>
   );
 };
